@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Flowers - Mood Booster</title>
+    <style>
+        body {
+            background: radial-gradient(circle at center, #0a0a0a, #020202);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+        .button {
+            padding: 15px 25px;
+            font-size: 18px;
+            color: white;
+            background-color: #ff4081;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #d81b60;
+        }
+        audio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌸 Mood Booster 🌸</h1>
+    <p>Kamu jangan Bad mood lagi ya, entar kamu jelek kalo cemberut mulu tau </p>
+    <p> Coba kamu clik tombol di bawah ini  !</p>
+    <a href="flower.html" class="button">Lihat Bunga 🌺</a>
+
+    <!-- Pemutar musik -->
+    <audio id="bg-music" autoplay loop>
+        <source src="yt1z.net - yung kai - blue (official music video) (320 KBps) (1).mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung audio.
+    </audio>
+
+    <button class="button" onclick="toggleMusic()">🎵 Putar / Hentikan Musik 🎵</button>
+
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById("bg-music");
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
+</body>
+</html>
